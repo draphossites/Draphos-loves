@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Draphos Love — descreva sua ideia e explore uma prévia interativa.">
+<title>Draphos Love</title>
+<style>
+:root{font-family:Inter,Arial,sans-serif;color:#171715;background:#faf9f5;font-synthesis:none;scroll-behavior:smooth}*{box-sizing:border-box}body{margin:0}a{color:inherit;text-decoration:none}button,textarea,select{font:inherit;color:inherit}button,a,select,summary{cursor:pointer}button{background:none;border:0}button:focus-visible,a:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:2px solid #5c49e4;outline-offset:3px}header{position:absolute;z-index:2;top:0;width:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding:12px 3.6%;gap:20px}.brand{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:21px;letter-spacing:-1px;width:max-content}.logo{width:16px;height:16px;background:linear-gradient(155deg,#ffbe38 5%,#ff5039 40%,#ef4088 63%,#8554f6 80%);clip-path:path('M0 5C0 -1 9 -2 10 5C18 5 18 16 11 16H0Z');display:inline-block}nav,.actions{display:flex;align-items:center;gap:23px;font-size:14px;white-space:nowrap}.actions{justify-self:end;gap:10px}.pill{border-radius:99px;padding:7px 15px;border:1px solid #0002;display:inline-block;box-shadow:0 1px 2px #0002}.dark{background:#171715;color:white}.navgroup{position:relative}.navgroup summary{list-style:none}.navgroup summary::after{content:' ⌄'}.dropdown{position:absolute;top:28px;background:white;padding:9px;border-radius:14px;box-shadow:0 8px 30px #0002;min-width:170px}.dropdown a{padding:9px;display:block;border-radius:8px}.dropdown a:hover{background:#f4f2ee}.hero{min-height:max(700px,100svh);position:relative;display:grid;place-items:center;isolation:isolate;overflow:hidden;padding:90px 20px}.aurora{position:absolute;inset:0;z-index:-1;background:radial-gradient(ellipse 32% 43% at 51% 46%,#faf9f5 1%,#faf9f5df 25%,transparent 91%),radial-gradient(ellipse 26% 47% at 52% 68%,#5b94fa 2%,#687fffba 35%,transparent 94%),radial-gradient(ellipse 47% 47% at 13% 101%,#ff2990 21%,#ff75da 58%,transparent 92%),radial-gradient(ellipse 47% 47% at 91% 101%,#ff2786 20%,#ff75d7 58%,transparent 93%),linear-gradient(180deg,#faf9f5 20%,#e9edf8 30%,#578cff 54%,#8561ee 68%,#ff61cd 100%)}.intro{text-align:center;width:min(100%,602px)}h1,h2,h3,p{margin:0}h1{font-size:clamp(34px,4.1vw,48px);font-weight:750;letter-spacing:-.055em;line-height:1.05}.intro>p{font-size:17px;color:#51504e;margin:10px 0 37px}.composer{background:#fff;border:1px solid #0001;border-radius:28px;box-shadow:0 15px 60px #22195e28;padding:12px;text-align:left}.composer:focus-within{box-shadow:0 10px 55px #22195e42}textarea{display:block;width:100%;border:0;resize:vertical;min-height:40px;max-height:180px;padding:9px 8px 0;background:none;font-size:15px;outline:none!important}.toolbar{display:flex;align-items:center;gap:9px}.tool{width:32px;height:32px;border:1px solid #e9e7e3;border-radius:50%;font-size:21px;display:grid;place-items:center}.tool:hover,.pill:not(.dark):hover{background:#efede9}.toolbar select{margin-left:auto;background:none;border:0;font-size:13px;padding:4px;color:#605e5a}.send{background:#191918;color:white;border:0}.send:hover{background:#403e39}.file-list{font-size:12px;color:#605e5a;overflow-wrap:anywhere}.file-list:not(:empty){padding:5px 8px}.section{max-width:1190px;margin:auto;padding:100px 30px}.section>h2,.end h2{font-size:clamp(34px,5vw,64px);line-height:1.02;letter-spacing:-.065em}.section>p{max-width:590px;margin-top:15px;color:#595753;line-height:1.55}.cards,.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:36px}.card{border:1px solid #e6e3dc;background:#fff;border-radius:22px;overflow:hidden;padding:13px}.card .copy{padding:15px 5px 10px}.copy p,.accordion p{font-size:15px;color:#595753;line-height:1.55;margin-top:8px}.art{height:210px;border-radius:13px;display:grid;place-items:center;overflow:hidden;padding:18px}.art.one{background:linear-gradient(135deg,#f1f0ff,#a5d0ff)}.art.two{background:linear-gradient(145deg,#e8ffd9,#d2f4f5)}.art.three{background:linear-gradient(145deg,#fff1dc,#ffcfe8)}.mock{background:#fff;border:1px solid #0001;border-radius:14px;padding:15px;box-shadow:0 10px 25px #0001;width:100%;font-size:14px}.mock b{display:block;padding:12px 0;font-size:21px}.tag{display:inline-block;padding:6px 9px;background:white;border-radius:30px;margin:4px;font-size:13px}.infra{background:#f0eee8}.accordion{margin-top:30px;border-top:1px solid #d4d0c6}.accordion details{padding:19px 0;border-bottom:1px solid #d4d0c6}.accordion summary{font-size:21px;font-weight:650}.brands{display:flex;flex-wrap:wrap;justify-content:space-between;gap:24px;margin-top:42px;font-size:clamp(20px,3vw,33px);font-weight:800;letter-spacing:-.06em}.metrics strong{display:block;font-size:clamp(28px,4vw,49px);letter-spacing:-.07em}.metric{border-top:1px solid #d9d5cc;padding:17px 0}.metric span{font-size:15px;color:#595753}.story{background:#f0eee8;border-radius:23px;margin-top:27px;padding:27px;display:flex;justify-content:space-between;align-items:center;gap:20px}.story h3{font-size:26px}.story p{margin:8px 0 12px}.story-controls{display:flex;gap:7px}.end{text-align:center;padding:90px 20px;background:linear-gradient(#faf9f5,#bcd3ff,#ff95db)}.end a{margin-top:22px}footer{max-width:1190px;margin:auto;display:flex;gap:25px;align-items:center;justify-content:space-between;flex-wrap:wrap;padding:33px 30px;font-size:14px}.muted{color:#585650}.cookies{position:fixed;z-index:3;bottom:15px;right:15px;width:min(287px,calc(100% - 30px));background:white;border:1px solid #efeeea;border-radius:32px;padding:24px;box-shadow:0 8px 25px #0002;font-size:13px;line-height:1.55}.cookies a{text-decoration:underline}.cookie-actions{display:grid;gap:8px;margin-top:14px}.cookie-actions button{border-radius:30px;padding:6px}.cookie-actions button:hover{background:#f3f0ee}.cookie-actions button:first-child{border:1px solid #ddd9d4;background:#faf9f7}.menu-toggle{display:none}dialog{width:min(480px,calc(100% - 32px));border:1px solid #e7e3dc;border-radius:24px;padding:24px;box-shadow:0 15px 60px #0002}dialog::backdrop{background:#17171570}dialog p{margin:12px 0;line-height:1.5}dialog form{margin-top:15px}#idea{white-space:pre-wrap;overflow-wrap:anywhere;padding:10px;background:#f3f1ed;border-radius:10px}[hidden]{display:none!important}
+@media(max-width:915px){header{grid-template-columns:1fr auto auto}.menu-toggle{display:block;order:3}.actions{order:2}nav{display:none;position:absolute;top:53px;right:16px;flex-direction:column;align-items:stretch;gap:12px;padding:17px;background:white;box-shadow:0 4px 24px #0002;border-radius:18px}.nav-open nav{display:flex}.dropdown{position:static;box-shadow:none;padding:3px}.cards{grid-template-columns:1fr}.art{height:160px}}@media(max-width:520px){header{gap:9px}.brand{font-size:19px}.actions{gap:6px;font-size:12px}.actions .pill{padding:6px 9px}.hero{min-height: max(580px,100svh);padding:70px 14px 120px}.intro>p{font-size:15px;margin-bottom:25px}.section{padding:65px 20px}.metrics{grid-template-columns:1fr;gap:6px}.story{align-items:flex-start}.cookies{bottom:9px;right:9px;width:min(287px,calc(100% - 18px));padding:14px 17px;border-radius:22px}.cookie-actions{gap:2px;margin-top:7px}}
+</style>
+</head>
+<body>
+<header id="top">
+<a class="brand" href="#top" aria-label="Draphos Love, início"><span class="logo" aria-hidden="true"></span>Draphos Love</a>
+<nav id="navigation" aria-label="Menu principal">
+<details class="navgroup"><summary>Soluções</summary><div class="dropdown"><a href="#plataforma">Criação de aplicativos</a><a href="#infra">Infraestrutura</a><a href="#empresas">Para empresas</a></div></details>
+<details class="navgroup"><summary>Recursos</summary><div class="dropdown"><a href="https://lovable.dev/pt-br/templates">Modelos</a><a href="https://lovable.dev/pt-br/guides">Guias</a><a href="https://docs.lovable.dev/">Documentação</a></div></details>
+<a href="https://lovable.dev/pt-br/community">Comunidade</a><a href="#empresas">Empresas</a><a href="https://lovable.dev/pt-br/pricing">Preços</a><a href="https://lovable.dev/pt-br/security">Segurança</a>
+</nav>
+<div class="actions"><a class="pill dark" href="#prompt">Começar</a></div>
+<button class="menu-toggle" aria-label="Menu" aria-controls="navigation" aria-expanded="false" type="button">☰</button>
+</header>
+<main>
+<section class="hero" aria-labelledby="title">
+<div class="aurora" aria-hidden="true"></div>
+<div class="intro">
+<h1 id="title">Crie algo com o Draphos Love</h1>
+<p>Dê vida a um novo produto, uma ferramenta interna ou uma empresa inteira.</p>
+<form class="composer" id="composer">
+<textarea id="prompt" rows="1" placeholder="Peça ao Draphos Love para criar um aplicativo..." aria-label="Descreva sua ideia"></textarea>
+<div class="file-list" id="file-list" aria-live="polite"></div>
+<div class="toolbar">
+<button type="button" class="tool" id="attach" aria-label="Anexar arquivo">+</button>
+<input id="files" type="file" multiple hidden>
+<select id="mode" aria-label="Modo"><option>Criar</option><option>Planejar</option></select>
+<button class="tool send" type="submit" aria-label="Enviar ideia">↑</button>
+</div>
+</form>
+</div>
+</section>
+<section class="section" id="plataforma">
+<h2>Uma plataforma.<br>Possibilidades infinitas.</h2>
+<p>Descreva o que você quer criar, refine o resultado e coloque o projeto no ar.</p>
+<div class="cards">
+<article class="card"><div class="art one"><div class="mock">＋ Nova ideia<b>Crie uma loja online</b><span class="pill dark">↑</span></div></div><div class="copy"><h3>Da ideia ao aplicativo</h3><p>Descreva seu projeto em linguagem natural e acompanhe a criação.</p></div></article>
+<article class="card"><div class="art two"><div class="mock">◉ Prévia<b>Organize seu trabalho em equipe</b><span class="tag">✦ Editar design</span></div></div><div class="copy"><h3>Refine o design e publique</h3><p>Ajuste a interface, teste a experiência e compartilhe seu projeto.</p></div></article>
+<article class="card"><div class="art three"><div><span class="tag">Análises</span><span class="tag">Nuvem</span><span class="tag">Conectores</span><span class="tag">Segurança</span><span class="tag">Pagamentos</span><span class="tag">SEO</span></div></div><div class="copy"><h3>Do protótipo à produção</h3><p>Conecte serviços e gerencie a infraestrutura do seu aplicativo.</p></div></article>
+</div>
+</section>
+<div class="infra"><section class="section" id="infra">
+<h2>Para criar e muito mais</h2>
+<p>Explore a infraestrutura e os serviços da plataforma original.</p>
+<div class="accordion">
+<details name="features" open><summary>Hospedagem</summary><p>Hospedagem, certificado SSL e infraestrutura de backend em um só lugar.</p></details>
+<details name="features"><summary>Integrações</summary><p>Conecte ferramentas que sua equipe já usa ao seu aplicativo.</p></details>
+<details name="features"><summary>Pagamentos</summary><p>Adicione pagamentos e trabalhe com moedas locais.</p></details>
+<details name="features"><summary>Segurança</summary><p>Verificações automáticas e logs de auditoria ajudam a acompanhar seu projeto.</p></details>
+<details name="features"><summary>Web, desktop e celular</summary><p>Crie e gerencie seus projetos em diferentes dispositivos.</p></details>
+</div></section></div>
+<section class="section" id="empresas"><h2>A escolha das<br>maiores marcas</h2><p>Veja como empresas usam a Lovable para construir suas próprias ferramentas.</p><div class="brands"><span>adidas</span><span>asana</span><span>ElevenLabs</span><span>zendesk</span><span>workday</span><span>NVIDIA</span></div></section>
+<section class="section"><h2>A prova está em produção</h2><p>Histórias de empresas que criaram software para suas operações.</p>
+<div class="story"><div aria-live="polite"><h3 id="story-title">Klar</h3><p id="story-text">Três estudantes criaram uma ferramenta de IA para ajudar pessoas a aprender.</p><a class="pill" href="https://lovable.dev/pt-br/customers">Histórias de clientes ↗</a></div><div class="story-controls"><button class="tool" id="previous" aria-label="História anterior">‹</button><button class="tool" id="next" aria-label="Próxima história">›</button></div></div></section>
+<section class="section"><h2>Milhões contam com a Lovable</h2><div class="metrics"><div class="metric"><strong>1,2 milhão</strong><span>Novos projetos por semana</span></div><div class="metric"><strong>60 milhões</strong><span>Projetos criados</span></div><div class="metric"><strong>900 milhões</strong><span>Visitas mensais a projetos</span></div></div></section>
+<section class="end"><h2>Tudo pronto para dar<br>vida à sua ideia?</h2><a class="pill dark" href="#prompt">Começar</a></section>
+</main>
+<footer><a class="brand" href="#top"><span class="logo" aria-hidden="true"></span>Draphos Love</a><span class="muted">Projeto independente inspirado no Lovable · PT-BR</span><a href="https://lovable.dev/pt-br/">Visitar Lovable ↗</a></footer>
+<aside class="cookies" id="cookies" aria-label="Preferências de cookies" hidden>
+<p>Usamos armazenamento local para lembrar suas preferências. <a href="https://lovable.dev/pt-br/privacy">Política de Privacidade</a></p>
+<div class="cookie-actions"><button data-cookie="accepted">Aceitar todos</button><button id="preferences">Gerenciar preferências</button><button data-cookie="rejected">Rejeitar todos</button></div>
+</aside>
+<dialog id="preview"><h2>Prévia da sua ideia</h2><p>Esta demonstração local mostra como seu pedido apareceria no criador.</p><p id="idea"></p><form method="dialog"><button class="pill dark">Voltar para editar</button></form></dialog>
+<dialog id="cookie-dialog"><h2>Preferências de cookies</h2><p>A réplica usa armazenamento local para registrar sua escolha.</p><form method="dialog"><button class="pill" data-cookie="rejected">Salvar essenciais</button> <button class="pill dark" data-cookie="accepted">Aceitar todos</button></form></dialog>
+<script>
+const menu = document.querySelector('.menu-toggle');
+menu.addEventListener('click', () => {
+  const open = document.querySelector('header').classList.toggle('nav-open');
+  menu.setAttribute('aria-expanded', String(open));
+});
+document.querySelectorAll('nav a').forEach(link => link.addEventListener('click', () => {
+  document.querySelector('header').classList.remove('nav-open');
+  menu.setAttribute('aria-expanded', 'false');
+}));
+const prompt = document.querySelector('#prompt');
+const files = document.querySelector('#files');
+const composer = document.querySelector('#composer');
+document.querySelector('#attach').addEventListener('click', () => files.click());
+files.addEventListener('change', () => {
+  document.querySelector('#file-list').textContent = Array.from(files.files, file => file.name).join(', ');
+});
+prompt.addEventListener('input', () => prompt.setCustomValidity(''));
+prompt.addEventListener('keydown', event => {
+  if (event.key === 'Enter' && !event.shiftKey && !event.isComposing) {
+    event.preventDefault();
+    composer.requestSubmit();
+  }
+});
+composer.addEventListener('submit', event => {
+  event.preventDefault();
+  const idea = prompt.value.trim();
+  if (!idea) {
+    prompt.setCustomValidity('Descreva sua ideia para continuar.');
+    prompt.reportValidity();
+    return;
+  }
+  document.querySelector('#idea').textContent = document.querySelector('#mode').value + ' — ' + idea;
+  document.querySelector('#preview').showModal();
+});
+const cookies = document.querySelector('#cookies');
+const cookieDialog = document.querySelector('#cookie-dialog');
+try { cookies.hidden = Boolean(localStorage.getItem('replica-cookie-choice')); }
+catch { cookies.hidden = false; }
+document.querySelector('#preferences').addEventListener('click', () => cookieDialog.showModal());
+document.querySelectorAll('[data-cookie]').forEach(button => button.addEventListener('click', () => {
+  try { localStorage.setItem('replica-cookie-choice', button.dataset.cookie); } catch {}
+  cookies.hidden = true;
+}));
+const stories = [
+  ['Klar', 'Três estudantes criaram uma ferramenta de IA para ajudar pessoas a aprender.'],
+  ['eXp Realty', 'A empresa criou ferramentas próprias para conectar seus corretores.'],
+  ['The Scion Group', 'Departamentos criaram aplicativos para simplificar seus fluxos de trabalho.'],
+  ['Nursa', 'A plataforma criou um novo produto em um fim de semana.']
+];
+let currentStory = 0;
+function showStory(direction) {
+  currentStory = (currentStory + direction + stories.length) % stories.length;
+  const [name, description] = stories[currentStory];
+  document.querySelector('#story-title').textContent = name;
+  document.querySelector('#story-text').textContent = description;
+}
+document.querySelector('#previous').addEventListener('click', () => showStory(-1));
+document.querySelector('#next').addEventListener('click', () => showStory(1));
+</script>
+</body>
+</html>
